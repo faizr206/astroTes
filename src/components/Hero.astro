@@ -26,7 +26,7 @@ const { title, description , list} = Astro.props;
 </div>
 
 <script>
-  import SimpleParallax from "simple-parallax-js/vanilla";
+  import SimpleParallax from "simple-parallax-js";
   const image = document.getElementsByClassName("thumbnail");
   new SimpleParallax(image, {
     overflow:true,

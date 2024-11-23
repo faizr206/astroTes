@@ -1,0 +1,35 @@
+---
+interface Props {
+    title: string;
+    description: string;
+    list: Array<string>;
+}
+
+const { title, description , list} = Astro.props;
+---
+
+
+<div class="hero bg-slate-800 overflow-hidden min-h-screen max-h-screen">
+  <img src="image.jpeg" class="w-full h-[200%] object-cover overflow-hidden thumbnail opacity-20" alt="">
+  <div class="hero-content text-center">
+    <div class="max-w-md">
+      <h1 class="text-5xl font-bold">{title}</h1>
+      {list.map((item)=>(
+        <h2>{item}</h2>
+      ))}
+      <p class="py-6">
+        {description}
+      </p>
+      <button class="btn btn-primary">Get Started</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  import SimpleParallax from "simple-parallax-js/vanilla";
+  const image = document.getElementsByClassName("thumbnail");
+  new SimpleParallax(image, {
+    overflow:true,
+    scale:1.5
+  });
+</script>

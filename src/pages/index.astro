@@ -1,0 +1,35 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import Hero from "../components/Hero.astro";
+import Carousel from "../components/Carousel.astro";
+import Ca from "../components/Ca.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout title="Welcome to Astro.">
+  <main class="w-full">
+    <Hero
+      title="Hello World"
+      description="lorem ipsum abc"
+      list={["a", "b", "c"]}
+    />
+    <br>
+    <Carousel />
+    <div class="grid grid-cols-4 place-items-center">
+      <Ca title="Halo" desc="123" />
+      <Ca title="Halo" desc="123" />
+      <Ca title="Halo" desc="123" />
+      <Ca title="Halo" desc="123" />
+      <Ca title="Halo" desc="123" />
+    </div>
+    <div class="mockup-browser bg-base-300 border m-10">
+      <div class="mockup-browser-toolbar">
+        <div class="input">https://daisyui.com</div>
+      </div>
+      <div class="bg-base-200 flex justify-center px-4 py-16">Hellho!</div>
+    </div>
+    <Footer />
+  </main>
+</Layout>
+
